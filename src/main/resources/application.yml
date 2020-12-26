@@ -1,0 +1,22 @@
+server:
+    port: 9002
+
+spring:
+    application:
+        name: resourceserver
+
+    datasource:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: "jdbc:mysql://127.0.0.1:3306/resourcedb?autoreconnect=true"
+        password: "root"
+        username: "root"
+        
+jpa:
+    generate-ddl: update
+        
+security:
+    oauth2:
+        resource:
+            jwt:
+                key-value: -----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt591xK8EmOvzqakWiI1E4mYdSvJgpbsfi3rBb2AHGpKhydd78AbQSnzX/Z58OVP37lI5m3NXunGcfGAmJ/UgCIOqJubRF5AGc6N3ZleLJxJeILNxjRhJO1x9fBXSsm70ypjyNaXtUcpIGScE3QOpa/nWNXNQcEowOpWFxVaLscMOdEClKp4I2rciuFkSPqljYUW5thzxWv1eJJ+vknui+IZ3DFyq6tifVSACA39T3wR16RNyr5kyl7M1B0PZfhhpECuwGB1TNNr/P2b7tqqx3Ly/7JDQHT5CEMGMbzFkciS04ecl3iKffbYdd6l35nwwW2rf+3WmiBdfMx3yyVOjwwIDAQAB-----END PUBLIC KEY-----
+  
